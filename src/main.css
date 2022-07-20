@@ -1,0 +1,303 @@
+/* Variables css*/
+:root {
+    /* Colors */
+    /* Color mode HSL(hue, saturation, lightness)*/
+    /*
+        blue    :   hsl(224, 69%, 14%)
+        red     :   hsl(0, 100%, 43%)
+        gray    :   hsl(0, 0%, 98%)
+        green   :   hsl(100, 83%, 41%)
+        yellow  :   HSL(52, 100%, 50%)
+    */
+
+    --hue: 100;
+    --sat: 100%;
+    --lig: 0%;
+
+    --first-color: hsl(var(--hue), var(--sat), var(--lig));
+    --first-color-dark: hsl(var(--hue), 80%, 20%);
+    --second-color: hsl(193, 100%, 47%);
+    --gray-color: hsl(206, 41%, 97%);
+    --title-color: hsl(var(--hue), var(--sat), var(--lig));
+    --text-color: hsl(var(--hue), 15%, 45%);
+    --text-color-light: hsl(var(--hue), 8%, 75%);
+    --text-color-lighten: hsl(var(--hue), 8%, 92%);
+    --body-color: hsl(var(--hue), 100%, 99%);
+    --facebook: hsl(220, 46%, 50%);
+    --instagram: radial-gradient(100% 100% at 0% 100%, #FC5245 0%, #B331B9 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    --pix: hsl(174, 55%, 50%);
+    --pinterest:hsl(0, 100%, 43%);
+    --whatsapp: hsl(171, 55%, 65%);
+    --web:hsl(52, 100%, 50%);
+    --attention-color-orange: hsl(22, 100%, 50%);
+    --attention-color-red: hsl(0, 100%, 43%);
+    --attention-color-green: hsl(120, 60%, 48%);
+    --attention-color-yellow: hsl(52, 100%, 50%);
+
+    /* Font and typography */
+    /* .5rem = 8px / 1rem = 16px */
+    --body-font: 'system-ui', sans-serif;
+    --header: 5.8rem;
+    --title: clamp(3rem, 3.8vw, 4.2rem);
+    --subtitle: clamp(2rem, 2.4vw, 2.8rem);
+    --subtitle-h4: clamp(1.8rem, 2.2vw, 2.4rem);
+    --body-text: clamp(1.6rem, 1.8vw, 1.8rem);
+    --details: clamp(1.4rem, 1.6vw, 1.8rem);
+    --smallest: clamp(1rem, 1.2vw, 1.4rem);
+
+}
+
+*,
+*::after,
+*::before {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border: 0;
+    outline-color: #ccc;
+    color: var(--first-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--body-font);
+    font-display: swap;
+}
+
+html {
+    max-width: 36rem;
+    margin: auto;
+    scroll-behavior: smooth;
+    direction: ltr;
+}
+
+h1 {
+    font-size: var(--header);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+h2 {
+    font-size: var(--title);
+    font-weight: 700;
+}
+h3 {
+    font-size: var(--subtitle);
+    font-weight: 600;
+}
+p {
+    font-size: var(--body-text);
+    font-weight: 400;
+}
+li {
+    font-size: var(--body-text);
+    font-weight: 500;
+}
+a {
+    font-size: var(--body-text);
+    font-weight: 500;
+}
+img {
+    display: block;
+    max-width: max-content;
+    height: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+span {
+    font-size: inherit;
+}
+strong {
+    font-size: inherit;
+}
+b {
+    font-size: inherit;
+}
+
+button {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    max-width: 25.6rem;
+    padding: 1.6rem 4rem;
+    color: var(--first-color);
+    border-radius: 0.8rem;
+    font-size: var(--body-text);
+    font-weight: 500;
+    text-align: center;
+    text-transform: normal;
+    background-color: var(--gray-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color .4s ease;
+    transition: box-shadow .4s ease;
+}
+
+button:hover {
+    box-shadow: 0px 1.25rem 16px -11px hsla(100, 100%, 10%, .4);
+}
+
+button:disabled {
+    background-color: #E4E4E4;
+    color: #8A8A8A;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+.container {
+    display: grid;
+    width: min(100% - 10%, 320px);
+    margin-inline: auto;
+    gap: 2.4rem;
+}
+
+header.profile{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    place-items: center;
+    padding-top: 3.2rem;
+}
+header.profile img{
+    background-color: transparent;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    border: 5px solid #ffffff;
+    box-shadow: 0px 1.25rem 26px -11px hsla(100, 100%, 10%, .3);
+}
+
+section.s-links{
+    
+}
+section.s-links .content-links{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-items: center;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    row-gap: 2.4rem;
+    margin: auto;
+}
+
+section.s-links .link-item .ico-facebook::before{
+    content: url(../assets/facebook.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .86rem;
+}
+section.s-links .link-item .ico-instagram::before{
+    content: url(../assets/instagram.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .86rem;
+}
+section.s-links .link-item .ico-pinterest::before{
+    content: url(../assets/pinterest.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .86rem;
+}
+section.s-links .link-item .ico-whatsapp::before{
+    content: url(../assets/whatsapp.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .86rem;
+}
+section.s-links .link-item .ico-pix::before{
+    content: url(../assets/pix.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .86rem;
+}
+section.s-links .link-item .ico-copy::after{
+    content: url(../assets/content-copy.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    top:0;
+    border-bottom: 0;
+    left: 200%;
+    right: 0;
+    opacity: 40%;
+     
+}
+section.s-links .link-item .ico-web::before{
+    content: url(../assets/web.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .86rem;
+}
+section.s-links .link-item .facebook{
+    background-color: var(--facebook);
+}
+section.s-links .link-item .instagram{
+    background: var(--instagram);
+}
+section.s-links .link-item .pinterest{
+    background-color: var(--pinterest);
+}
+section.s-links .link-item .whatsapp{
+    background-color: var(--whatsapp);
+}
+section.s-links .link-item .pix{
+    background-color: var(--pix);
+}
+section.s-links .link-item .web{
+    background-color: var(--web);
+}
+footer{
+    display: grid;
+    width: min(100% - 10%, 26rem);
+}
+footer span{
+    display: block;
+    width: 100%;
+    margin: auto;
+    font-size: var(--body-text);
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+  }
+  
+  #installContainer {
+    position: absolute;
+    bottom: 1em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #installContainer button {
+    background-color: inherit;
+    border: 1px solid white;
+    color: white;
+    font-size: 1em;
+    padding: 0.75em;
+  }
