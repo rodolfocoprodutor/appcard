@@ -29,6 +29,8 @@
     --pinterest:hsl(0, 100%, 43%);
     --whatsapp: hsl(171, 55%, 65%);
     --web:hsl(52, 100%, 50%);
+    --dourado: hsl(42, 80%, 54%);
+    --nubank: hsla(279, 91%, 43%, 1);
     --attention-color-orange: hsl(22, 100%, 50%);
     --attention-color-red: hsl(0, 100%, 43%);
     --attention-color-green: hsl(120, 60%, 48%);
@@ -181,17 +183,16 @@ header.profile img{
     border: 5px solid #ffffff;
     box-shadow: 0px 1.25rem 26px -11px hsla(100, 100%, 10%, .3);
 }
-
-section.s-links{
-    
+header.profile h2{
+    margin-top: 3.2rem;
 }
+
 section.s-links .content-links{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: stretch;
     justify-items: center;
-    padding-top: 3.2rem;
     padding-bottom: 3.2rem;
     row-gap: 2.4rem;
     margin: auto;
@@ -232,6 +233,13 @@ section.s-links .link-item .ico-pix::before{
     aspect-ratio: 1 / 1;
     margin-right: .86rem;
 }
+section.s-links .link-item .ico-nubank::before{
+    content: url(../assets/nubank.svg);
+    display: block;
+    width: 2.4rem;
+    aspect-ratio: 1 / 1;
+    margin-right: .86rem;
+}
 section.s-links .link-item .ico-copy::after{
     content: url(../assets/content-copy.svg);
     display: block;
@@ -240,7 +248,7 @@ section.s-links .link-item .ico-copy::after{
     position: relative;
     top:0;
     border-bottom: 0;
-    left: 200%;
+    left: 100%;
     right: 0;
     opacity: 40%;
      
@@ -253,22 +261,26 @@ section.s-links .link-item .ico-web::before{
     margin-right: .86rem;
 }
 section.s-links .link-item .facebook{
-    background-color: var(--facebook);
+    background-color: var(--dourado);
 }
 section.s-links .link-item .instagram{
-    background: var(--instagram);
+    background: var(--dourado);
 }
 section.s-links .link-item .pinterest{
-    background-color: var(--pinterest);
+    background-color: var(--dourado);
 }
 section.s-links .link-item .whatsapp{
-    background-color: var(--whatsapp);
+    background-color: var(--dourado);
 }
 section.s-links .link-item .pix{
-    background-color: var(--pix);
+    background-color: var(--dourado);
+}
+section.s-links .link-item .nubank{
+    background-color: var(--nubank);
+    color: #ffffff;
 }
 section.s-links .link-item .web{
-    background-color: var(--web);
+    background-color: var(--dourado);
 }
 footer{
     display: grid;
