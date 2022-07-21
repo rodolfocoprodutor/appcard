@@ -86,7 +86,7 @@
                             <a href="http://" target="_blank"> <button class="whatsapp"><i class="ico-whatsapp"></i> Whatsapp</button> </a>
                         </li>
                         <li class="link-item">
-                            <a href="http://" target="_blank"> <button class="pix"><i class="ico-pix"></i> Chave pix CPF <i class="ico-copy"></i></button> </a>
+                            <a href="#"> <button class="pix" input type="text" value="35869796000106"onclick="myFunction()" id="myInput"><i class="ico-pix"></i> Chave pix CPF <i class="ico-copy"></i></button> </a>
                         </li>
                         <li class="link-item">
                             <a href="https://nubank.com.br/cobranca/MZhjxFOXcov4jsj" target="_blank"> <button class="nubank"><i class="ico-nubank"></i> NUBank PIX </button> </a>
@@ -101,6 +101,16 @@
         <footer>
             
         </footer>
+        <script>
+            function myFunction() {
+            / Get the text field /
+            var copyText = document.getElementById("myInput");
+            navigator.clipboard.writeText(copyText.value);
+            / Alert the copied text /
+            alert("Chave Pix copiada!: " + copyText.value);
+            }
+        </script>
+       
     </body>
 
 </html>
