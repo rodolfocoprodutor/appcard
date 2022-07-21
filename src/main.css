@@ -106,7 +106,6 @@ img {
     display: block;
     max-width: max-content;
     height: auto;
-    vertical-align: middle;
     object-fit: contain;
 }
 span {
@@ -234,7 +233,7 @@ section.s-links .link-item .ico-pix::before{
     margin-right: .86rem;
 }
 section.s-links .link-item .ico-nubank::before{
-    content: url(../assets/nubank.svg);
+    content: '';
     display: block;
     width: 2.4rem;
     aspect-ratio: 1 / 1;
