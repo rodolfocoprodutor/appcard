@@ -17,7 +17,6 @@ button {
     transition: background-color .4s ease;
     transition: box-shadow .4s ease;
 }
-
 button:hover {
     box-shadow: 0px 1.25rem 16px -11px hsla(100, 100%, 10%, .4);
 }
@@ -38,7 +37,7 @@ section {
 
 .container {
     display: grid;
-    width: min(100% - 10%, 320px);
+    width: min(100% - 10%, 32rem);
     margin-inline: auto;
     gap: 2.4rem;
 }
@@ -51,6 +50,7 @@ header.profile{
     padding-top: 3.2rem;
 }
 header.profile img{
+    max-width: max-content;
     background-color: transparent;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
@@ -156,6 +156,8 @@ section.s-links .link-item .nubank{
 section.s-links .link-item .web{
     background-color: var(--dourado);
 }
+
+/* Footer */
 footer{
     display: grid;
     width: min(100% - 10%, 26rem);
@@ -167,23 +169,3 @@ footer span{
     font-size: var(--body-text);
     text-align: center;
 }
-
-.hidden {
-    display: none !important;
-  }
-  
-  #installContainer {
-    position: absolute;
-    bottom: 1em;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  #installContainer button {
-    background-color: inherit;
-    border: 1px solid white;
-    color: white;
-    font-size: 1em;
-    padding: 0.75em;
-  }
