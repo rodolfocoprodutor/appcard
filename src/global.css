@@ -51,26 +51,6 @@
 
 }
 
-*,
-*::after,
-*::before {
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    border: 0;
-    outline-color: #ccc;
-    color: var(--first-color);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 62.5%;
-    font-family: var(--body-font);
-    font-display: swap;
-}
-
 html {
     width: 100%;
     max-width: 36rem;
@@ -111,8 +91,6 @@ a {
 }
 
 img {
-    display: block;
-    width: 100%;
     object-fit: contain;
 }
 
